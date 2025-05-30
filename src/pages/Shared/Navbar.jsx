@@ -19,8 +19,11 @@ const Navbar = () => {
   const links = (
     <>
       <li><NavLink to="/">Home</NavLink></li>
-      <li><NavLink to="/">Home</NavLink></li>
-      <li><NavLink to="/">Home</NavLink></li>
+      {
+        user && <>
+          <li><NavLink to="/myApplications">My Applications</NavLink></li>
+        </>
+      }
     </>
   );
 
@@ -52,7 +55,7 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <NavLink to="/">GetHired</NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
