@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Banner from './Banner';
+import HotJobs from './HotJobs';
 
 const Home = () => {
   return (
     <div>
-      <Banner></Banner>
+      <Banner />
+      <Suspense fallback={'Loading hot jobs'}>
+        <HotJobs />
+      </Suspense>
     </div>
   );
 };
